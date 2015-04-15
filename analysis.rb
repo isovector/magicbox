@@ -4,11 +4,8 @@ require 'rexml/document'
 require 'tmpdir'
 
 def fetch(tmpdir)
-    usernames   = []
-
-    ARGF.readlines.each do |line|
-        usernames << line.strip
-    end
+    users = CSV.table(ARGV[0])
+    usernames = users[:username]
 
     puts "Fetching #{usernames.length} user collections to #{tmpdir}:"
 

@@ -12,9 +12,11 @@ Usage
 =====
 - Clone this reposiotry
 - cd into the directory
-- Create a file called "users.txt" with one username per line
-- Run this command
+- Ensure you have a csv file with a column called 'username' which corresponds to the boardgamegeek username
+- Run this command:
 
-ruby analysis.rb users.txt
+```shell
+ruby analysis.rb users.csv
+```
 
 - After a few minutes, you'll be notified that the output CSV has been created in the results directory
