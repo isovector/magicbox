@@ -68,7 +68,7 @@ def generateCSV(tmpdir, usernames)
     end
 
     # Export user-games matrix
-    output_file = "results/" + Time.now.to_i.to_s + ".csv"
+    output_file = "ownership.csv"
 
     CSV.open(output_file, 'wb') do |csv|
         csv << ["username"] + all_titles.values
